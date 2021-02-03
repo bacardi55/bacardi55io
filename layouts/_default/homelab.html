@@ -1,0 +1,18 @@
+{{- define "main" -}}
+
+{{- $justify := false -}}
+{{- if eq .Params.justify true -}} {{- $justify = true -}} {{- end -}}
+  <div class="article-container">
+    <p>
+      {{ .Content }}
+    </p>
+  <h3>All my selfhosting / homelab posts:</h3>
+  <ul class="note list">
+  {{ range where (where site.Pages "Section" "posts") "Params.categories" "INTERSECT" (slice "selfhosting") }}
+    {{- $relURL := replace .RelPermalink "#" "%23" -}}
+    {{- $relURL = replace $relURL "." "%2e" -}}
+    <li class="item"><a class="note" href="{{- $relURL -}}">{{ .Title }}</a></li>
+  {{ end }}
+  </ul>
+  </div>
+{{- end -}}

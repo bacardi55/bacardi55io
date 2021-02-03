@@ -1,0 +1,79 @@
+baseURL = "https://bacardi55.io"
+languageCode = "en-us"
+title = "Bacardi55's cave"
+
+theme = "hugo-notepadium"
+copyright = "©2021 bacardi55"
+
+enableRobotsTXT = true
+
+[permalinks]
+posts = "/:year/:month/:day/:title/"
+
+[related]
+  includeNewer = true
+  threshold = 20
+  toLower = false
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+
+# Enable Disqus
+#disqusShortname = "XXX"
+# Google Analytics
+#googleAnalytics = "UA-123-45"
+
+[markup.highlight]
+  codeFences = true
+  noClasses = false
+
+#[markup.goldmark.renderer]
+#unsafe = true  # enable raw HTML in Markdown
+
+[params]
+  style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+  dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
+  logo = ""  # if you have a logo png
+  slogan = "I know that I know nothing"
+  license = ""  # CC License
+  fullRss = true # Puts entire HTML post into rss 'description' tag. If unset, default is false.
+
+[params.comments]
+  enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+
+[params.math]
+  enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
+  use = "katex"  # option: "katex", "mathjax". default: "katex"
+
+[params.syntax]
+  use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
+  theme = "xcode"
+  darkTheme = "xcode-dark"  # apply this theme in dark mode
+
+[params.share]
+  enable = false
+  addThisId = ""
+  inlineToolId = ""
+
+[params.nav]
+  showCategories = true       # /categories/
+  showTags = true             # /tags/
+
+# custom navigation items
+
+[[params.nav.custom]]
+  title = "Homelab"
+  url = "/pages/home-lab"
+  weight = -10
+
+[[params.nav.custom]]
+  title = "About"
+  url = "/pages/about-me"
+  weight = 3
+
+[[params.nav.custom]]
+  title = "RSS"
+  url = "/index.xml"
+  weight = 3
+
