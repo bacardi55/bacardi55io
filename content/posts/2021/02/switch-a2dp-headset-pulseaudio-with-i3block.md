@@ -4,7 +4,7 @@ date: 2021-02-03T19:12:23+01:00
 categories:
 - laptop
 - dev
-description: First blog post of 2021!
+description: A quick way to switch from A2dp to Headset pulseaudio profile for a bluetooth headset.
 tags:
 - i3blocks
 - pulseaudio
