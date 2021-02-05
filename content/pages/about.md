@@ -21,4 +21,4 @@ FYI, I am French and not a native English speaker, I apologize for all the gramm
 - On github: [https://github.com/bacardi55/](https://github.com/bacardi55/)
 - On gitlab (mostly private projects): [https://gitlab.com/bacardi55/](https://gitlab.com/bacardi55/)
 - On IRC: bacardi55 on freenode or recycled
-- Via email: bac _at_ rdi55 _dot_ pl (GPG key: [B27C 53D0 E72D 26C0](/pubkey.txt))
+- Via email: bac _at_ rdi55 _dot_ pl (GPG key: [B27C 53D0 E72D 26C0](/files/pubkey.txt))
