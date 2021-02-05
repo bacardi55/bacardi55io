@@ -68,7 +68,7 @@ posts = "/:year/:month/:day/:title/"
   weight = -10
 
 [[params.nav.custom]]
-  title = "About"
+  title = "About Me"
   url = "/pages/about-me"
   weight = 3
 
