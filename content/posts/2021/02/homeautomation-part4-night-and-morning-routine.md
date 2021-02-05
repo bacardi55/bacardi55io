@@ -1,5 +1,5 @@
 ---
-title: "Home Automation, part 4: Night and Morning routines with Nodered"
+title: "[DRAFT] Home Automation, part 4: Night and Morning routines with Nodered"
 description: "Description of the automated flow at night and morning with Nodered as the center piece"
 date: 2021-02-09T19:12:13+01:00
 tags:
@@ -27,15 +27,13 @@ It all starts at 8pm at night with a simple question I receive via telegram from
 
 A couple of hours later, at 10pm, I receive another question on telegram asking me at what time I want to wake up tomorrow. I only receive this if the house is not in "vacation" mode.
 
-![Incoming telegram chat at 8pm](/images/posts/2021/02/telegram-night.png)
-
 I have some pre-programmed time to select (eg: 7am, 7:30am, 8am or 8:30am) that I can clicked easily to select the right time, or click on "other" to indicate manually a time to wake up:
 
 Once the time is set, I'll be asked what type of music I want to listen in the morning. I have 2 very different playlists (one with only my favorite hiphop songs, the other one with classical music). The UI ask me to select manual artist otherwise, but I haven't configure the flows in this case as I normally will want just one of the 2 choices.
 
 After deciding what music will be played, I'm asked if I going to bed. At that point, I usually wait to click yes only when I go to sleep. This will trigger the «Going to bed» scenario
 
-![Incoming telegram chat at 10pm](/images/posts/2021/02/telegram-10pm.png)
+![Incoming telegram chat at 8pm](/images/posts/2021/02/telegram-night.png)
 
 The alarm setup flow is a bit messy and looks like this:
 

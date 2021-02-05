@@ -1,5 +1,5 @@
 ---
-title: "Welcome Helios 64 as the new house NAS :)"
+title: "[DRAFT] Welcome Helios 64 as the new house NAS :)"
 date: 2021-02-06T19:18:13+01:00
 categories:
 - selfhosting

@@ -1,5 +1,5 @@
 ---
-title: "Home Automation, part 3: List of my automation flows"
+title: "[DRAFT] Home Automation, part 3: List of my NodeRed automation flows"
 description: "A list of all my NodeRed flows that automate my life"
 date: 2021-02-06T19:12:13+01:00
 tags:
@@ -12,9 +12,11 @@ categories:
 draft: true
 ---
 
-Quick posts around the different automation flow I have setup so far. I'll do a couple of deep dive in separate posts for the most important one.
+I've discussed previously on this blog the [architecture](/2020/04/12/home-automation-part-1-context-and-architecture/) and [setup](/2020/04/14/home-automation-part-2-nodered-mosquitto-and-domoticz-on-my-docker-swarm-cluster/) to play with home automation, with tools like [NodeRed](https://nodered.org/), [Domoticz](https://www.domoticz.com/) and [Mosquitto](https://mosquitto.org/).
 
-**Disclaimer**: I'm using a lot of `link in` and `link out` node to share info between flows and also subflows. They have clear names but sometimes it might not be easy to follow. If you have any questions or remarks, let me know :)
+Today, before going into details of implementation, I thought it would be a good start to introduce the different NodeRed flows I have to give you an idea of the different automation in place. I'll then cover the most interesting ones in dedicated posts later :).
+
+**Disclaimer**: I'm using a lot of `link in` and `link out` node to share info between flows and also subflows. They have clear names but sometimes it might not be easy to follow. If you have any questions or remarks, let me know by email :)
 
 ### Dashboard
 
