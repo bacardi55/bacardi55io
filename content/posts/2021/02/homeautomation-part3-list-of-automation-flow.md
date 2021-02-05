@@ -1,7 +1,7 @@
 ---
 title: "Home Automation, part 3: List of my automation flows"
 description: "A list of all my NodeRed flows that automate my life"
-date: 2021-02-16T19:18:13+01:00
+date: 2021-02-06T19:12:13+01:00
 tags:
 - homeautomation
 - nodered
@@ -9,6 +9,7 @@ tags:
 - raspberry pi
 categories:
 - selfhosting
+draft: true
 ---
 
 Quick posts around the different automation flow I have setup so far. I'll do a couple of deep dive in separate posts for the most important one.

@@ -8,6 +8,7 @@ tags:
 - helios
 - openmediavault
 - storage
+draft: true
 ---
 
 As I teased in the article around using sshfs as my new cluster storage, I recently[^1] purchased an [Helios64]() as my first home NAS.
