@@ -1,5 +1,5 @@
 ---
-title: "Home Automation, part 3: List of my NodeRed automation flows"
+title: "Home Automation, part 4: List of my NodeRed automation flows"
 description: "A list of all my NodeRed flows that automate my life"
 date: 2021-02-06T19:19:53+01:00
 tags:
