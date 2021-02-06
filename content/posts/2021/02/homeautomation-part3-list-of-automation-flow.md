@@ -1,7 +1,7 @@
 ---
-title: "[DRAFT] Home Automation, part 3: List of my NodeRed automation flows"
+title: "Home Automation, part 3: List of my NodeRed automation flows"
 description: "A list of all my NodeRed flows that automate my life"
-date: 2021-02-06T19:12:13+01:00
+date: 2021-02-06T19:19:53+01:00
 tags:
 - homeautomation
 - nodered
@@ -9,7 +9,6 @@ tags:
 - raspberry pi
 categories:
 - selfhosting
-draft: true
 ---
 
 I've discussed previously on this blog the [architecture](/2020/04/12/home-automation-part-1-context-and-architecture/) and [setup](/2020/04/14/home-automation-part-2-nodered-mosquitto-and-domoticz-on-my-docker-swarm-cluster/) to play with home automation, with tools like [NodeRed](https://nodered.org/), [Domoticz](https://www.domoticz.com/) and [Mosquitto](https://mosquitto.org/).
@@ -96,7 +95,7 @@ becomes
 
 ![MQTT Domoticz In](/images/posts/2021/02/nodered-mqtt-domoticz-out.png)
 
-This is better for me as the output is cleaner and the topic more explicit following a naming convention like `home/<Room>/Device`. Plus I filter also what goes out so I dont' resend everything received by Domoticz, but only the info I want to act on.
+This is better for me as the output is cleaner and the topic more explicit following a naming convention like `home/<Room>/<Device>`. Plus I filter also what goes out so I dont' resend everything received by Domoticz, but only the info I want to act on.
 
 I also check in there the battery level of the different devices and send an alert via telegram in case a device has a low battery (<15%).
 
