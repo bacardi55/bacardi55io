@@ -7,6 +7,8 @@ copyright = "©2013-2021 bacardi55"
 
 enableRobotsTXT = true
 
+paginate = 110
+
 [permalinks]
 posts = "/:year/:month/:day/:title/"
 
