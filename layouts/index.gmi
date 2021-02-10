@@ -1,0 +1,16 @@
+    ____                            ___ ____________
+   / __ )____ __________ __________/ (_) ____/ ____/
+  / __  / __ `/ ___/ __ `/ ___/ __  / /___ \/___ \
+ / /_/ / /_/ / /__/ /_/ / /  / /_/ / /___/ /___/ /
+/_____/\__,_/\___/\__,_/_/   \__,_/_/_____/_____/
+
+Welcome on my small capsule on the Gemini space :)
+
+I'm planning to add specific gemini content in here, but in the meantime, here are my blog posts:
+
+{{ range (where site.RegularPages "Section" "in" "posts") }}
+  {{- $dateFormat := site.Params.dateFormat -}}
+  {{- $dateFormat := .Date.Format $dateFormat -}}
+=> {{ replace .Permalink "gemini://bacardi55.io/gemini" "gemini://gmi.bacardi55.io" }} {{ .Title }} - {{ $dateFormat }}
+{{ end }}
+

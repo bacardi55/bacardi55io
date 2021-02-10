@@ -77,3 +77,21 @@ posts = "/:year/:month/:day/:title/"
   url = "/index.xml"
   weight = 3
 
+
+[mediaTypes]
+  [mediaTypes."text/gemini"]
+    suffixes = ["gmi"]
+
+[outputFormats]
+  [outputFormats.Gemini]
+    name = "gemini"
+    isPlainText = true
+    isHTML = false
+    mediaType = "text/gemini"
+    protocol = "gemini://"
+    permalinkable = true
+    path = "gemini/"
+
+[outputs]
+  home = ["HTML", "RSS", "gemini"]
+  page = ["HTML", "gemini"]
