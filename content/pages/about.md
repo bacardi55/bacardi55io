@@ -19,7 +19,7 @@ You can also find the content of this blog on my [gemini](https://gemini.circuml
 ## Where to find me?
 
 - On Mastodon: [https://framapiaf.org/@bacardi55](https://framapiaf.org/@bacardi55)
+- Via email: bac _at_ rdi55 _dot_ pl (GPG key: [B27C 53D0 E72D 26C0](/files/pubkey.txt))
+- On IRC: bacardi55 on freenode or recycled
 - On github: [https://github.com/bacardi55/](https://github.com/bacardi55/)
 - On gitlab (mostly private projects): [https://gitlab.com/bacardi55/](https://gitlab.com/bacardi55/)
-- On IRC: bacardi55 on freenode or recycled
-- Via email: bac _at_ rdi55 _dot_ pl (GPG key: [B27C 53D0 E72D 26C0](/files/pubkey.txt))
