@@ -55,8 +55,14 @@ sleep 1
 cd "$workdir/"
 /usr/bin/python3 ./generate_gmi_files.py
 
+echo "Everything has been generated, going to synchronize weblog and gemlog, you have 5 seconds to cancel it"
+
+sleep 5
+
 # Now we can actually deploy:
 
-#rsync -azvhP --delete --exclude "gemini" ~/workspace/perso/bacardi55iov2/public/ pi@cell:/mnt/sshfs/helios/cluster-data/containers-data/bacardi55io/public
+echo "Deploying Blog"
+rsync -azvhP --delete --exclude "_gemini_" ~/workspace/perso/bacardi55iov2/public/ pi@cell:/mnt/sshfs/helios/cluster-data/containers-data/bacardi55io/public
 
-#rsync -avzhP --delete ~/workspace/perso/bacardi55iov2/public/gemini/ pi@ryosaeba:/srv/gemini/gmi.bacardi55.io/
+echo "Deploying Capsule"
+rsync -avzhP --delete ~/workspace/perso/bacardi55iov2/public/_gemini_/ pi@ryosaeba:/srv/gemini/gmi.bacardi55.io/
