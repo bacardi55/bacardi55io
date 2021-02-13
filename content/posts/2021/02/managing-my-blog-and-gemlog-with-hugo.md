@@ -1,16 +1,15 @@
 ---
 title: "Managing this site and my gemini capsule with Hugo"
-date: 2021-02-13T19:16:03+01:00
+date: 2021-02-13T16:16:03+01:00
 tags:
 - gemini
 categories:
 - selfhosting
-draft: true
 ---
 
 ## Context
 
-When I [started my gemini capsule](/2021/02/10/deploying-my-own-gemini-capsule-with-gmnisrv/), I quickly put a basic mirror of this blog on it as a temporary thing. I do have a goal to write specific content on my gemini capsule. If you want, you can read about the reasons why I write on gemini, I wrote an [article on my gemini gemlog about it (Gemini link)](gemini://gmi.bacardi55.io/gemlog/2021/02/my-first-gemini-post.gmi).
+When I [started my gemini capsule](https://bacardi55.io/2021/02/10/deploying-my-own-gemini-capsule-with-gmnisrv/), I quickly put a basic mirror of this blog on it as a temporary thing. I do have a goal to write specific content on my gemini capsule. If you want, you can read about the reasons why I write on gemini, I wrote an [article on my gemini gemlog about it (Gemini link)](gemini://gmi.bacardi55.io/gemlog/2021/02/my-first-gemini-post.gmi).
 
 I worked on it in the past days to achieve something closer to my needs:
 - Having a different weblog and gemlog "sites", meaning at least the homepage should be different. The homepage of the blog only list the blog posts. The homepage of my capsule should first list the latest gemlog posts with a link to all gemlog posts and then latest blog posts with link to full list pages.
@@ -21,6 +20,8 @@ I worked on it in the past days to achieve something closer to my needs:
 - (Optional: List gemlog entries on the blog somewhere so at least title would be visible to web visitors)
 
 Maybe everything I want to achieve is doable with hugo only, but I couldn't figure out…
+
+If you just want to look at the repo, there is a [github mirror here](https://github.com/bacardi55/bacardi55io).
 
 ## Generating the site and the capsule
 
@@ -92,7 +93,7 @@ I also added a new config parameter to indicate the geminiBaseUrl. That is becau
 
 Let’s start with the homepage template for the gemini version `layout/index.gmi`:
 
-You can find the full code [here](), but the main parts are:
+You can find the full code [here](https://github.com/bacardi55/bacardi55io/blob/main/layouts/index.gmi), but the main parts are:
 
 ```gotemplate
 {{ range first 5 (where site.RegularPages "Section" "in" "gemlog") }}
@@ -188,6 +189,7 @@ Basically:
 - Remove useless files and empty directory.
 - I also remove the `public/gemlog` directory so gemlog posts are not accessible from the web version even if you know the path.
 
+The full script [here](https://github.com/bacardi55/bacardi55io/blob/main/deploy.sh).
 
 To give you an idea, directory structure looks like this at this point of the script:
 
@@ -258,8 +260,9 @@ You will need the mentioned library before running this script, you can install 
 pip3 install md2gemini
 ```
 
-You can look at the [full shell script here]() and the full repo of [this blog here]().
-
 Again, this will be improved into a single (python) script in the near future.
+
+You can look at the repo [here](https://github.com/bacardi55/bacardi55io). Feel free to ping me via email or mastodon if anything is unclear :)
+
 
 [^1]: I started with a shell script as at first it was only 2 lines (1 to generate content via `hugo` and a simple `rsync` command). Knowing what I know now, I would have just made 1 python script. I still plan to upgrade this into one clean python script at some point :).
