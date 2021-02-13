@@ -10,7 +10,7 @@ author: "bacardi55"
 
 A lazy nerd… So it needs to be written… :-P
 
-You can read [this post about why I'm writing on this blog](/posts/2020/04/25/why-do-i-write-on-this-blog/) to understand me a bit better.
+You can read [this post about why I'm writing on this blog](/2020/04/25/why-do-i-write-on-this-blog/) to understand me a bit better.
 
 FYI, I am French and not a native English speaker, I apologize for all the grammar mistakes, misspelling and other errors :-).
 

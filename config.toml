@@ -40,6 +40,7 @@ posts = "/:year/:month/:day/:title/"
   slogan = "I know that I know nothing"
   license = ""  # CC License
   fullRss = true # Puts entire HTML post into rss 'description' tag. If unset, default is false.
+  geminiBaseUrl = "gemini://gmi.bacardi55.io"
 
 [params.comments]
   enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
@@ -67,16 +68,21 @@ posts = "/:year/:month/:day/:title/"
 [[params.nav.custom]]
   title = "Homelab"
   url = "/pages/home-lab"
-  weight = -10
+  weight = 1
 
 [[params.nav.custom]]
   title = "About Me"
   url = "/pages/about-me"
-  weight = 3
+  weight = 0
 
 [[params.nav.custom]]
   title = "RSS"
   url = "/index.xml"
+  weight = 2
+
+[[params.nav.custom]]
+  title = "Gemini"
+  url = "gemini://gmi.bacardi55.io"
   weight = 3
 
 
@@ -92,8 +98,9 @@ posts = "/:year/:month/:day/:title/"
     mediaType = "text/gemini"
     protocol = "gemini://"
     permalinkable = true
-    path = "gemini/"
+    path = "/gemini/"
 
 [outputs]
   home = ["HTML", "RSS", "gemini"]
-  page = ["HTML", "gemini"]
+  page = ["HTML"]
+  section = ["gemini"]

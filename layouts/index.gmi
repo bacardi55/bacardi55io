@@ -1,16 +1,50 @@
+{{ $geminiBaseUrl := site.Params.geminiBaseUrl }}
     ____                            ___ ____________
    / __ )____ __________ __________/ (_) ____/ ____/
   / __  / __ `/ ___/ __ `/ ___/ __  / /___ \/___ \
  / /_/ / /_/ / /__/ /_/ / /  / /_/ / /___/ /___/ /
 /_____/\__,_/\___/\__,_/_/   \__,_/_/_____/_____/
 
+
 Welcome on my small capsule on the Gemini space :)
+Disclaimer: I am French and not a native English speaker, I apologize for all the grammar mistakes, misspelling and other errors :-).
 
 I'm planning to add specific gemini content in here, but in the meantime, here are my blog posts:
 
-{{ range (where site.RegularPages "Section" "in" "posts") }}
+# My latest Gemlog posts:
+
+{{ range first 5 (where site.RegularPages "Section" "in" "gemlog") }}
   {{- $dateFormat := site.Params.dateFormat -}}
   {{- $dateFormat := .Date.Format $dateFormat -}}
-=> {{ replace .Permalink "gemini://bacardi55.io/gemini" "gemini://gmi.bacardi55.io" }} {{ .Title }} - {{ $dateFormat }}
+=> {{ $geminiBaseUrl }}/{{ replace .File.Path ".md" ".gmi" }} {{ .Title }} - {{ $dateFormat }}
 {{ end }}
+
+=> {{ $geminiBaseUrl }}/gemlog/index.gmi  All my Gemlog posts
+
+
+# My latest blog posts:
+
+{{ range first 5 (where site.RegularPages "Section" "in" "posts") }}
+  {{- $dateFormat := site.Params.dateFormat -}}
+  {{- $dateFormat := .Date.Format $dateFormat -}}
+=> {{ $geminiBaseUrl }}/{{ replace .File.Path ".md" ".gmi" }} {{ .Title }} - {{ $dateFormat }}
+{{ end }}
+
+=> {{ $geminiBaseUrl }}/posts/index.gmi  All my Blog posts
+
+
+You can also find the blog posts on the web here:
+=> https://bacardi55.io
+
+
+## Where to find me?
+
+- Via email: bac _at_ rdi55 _dot_ pl (GPG key: [B27C 53D0 E72D 26C0](/files/pubkey.txt))
+- On IRC: bacardi55 on freenode or recycled
+- On Mastodon:
+=> https://framapiaf.org/@bacardi55
+- On github:
+=> https://github.com/bacardi55
+- On gitlab (mostly private projects):
+=> https://gitlab.com/bacardi55/
 

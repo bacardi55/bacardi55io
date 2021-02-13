@@ -1,0 +1,8 @@
+# {{ .Title }}
+{{ $geminiBaseUrl := site.Params.geminiBaseUrl }}
+
+{{ range .Pages }}
+  {{- $dateFormat := site.Params.dateFormat -}}
+  {{- $dateFormat := .Date.Format $dateFormat -}}
+=> {{ $geminiBaseUrl }}/{{ replace .File.Path ".md" ".gmi" }} {{ .Title }} - {{ $dateFormat }}
+{{ end }}
