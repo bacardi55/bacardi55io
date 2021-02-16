@@ -22,6 +22,10 @@ posts = "/:year/:month/:day/:title/"
     name = "tags"
     weight = 100
 
+[author]
+  name = "bacardi55"
+  email = "bac_at_rdi55_dot_pl"
+
 # Enable Disqus
 #disqusShortname = "XXX"
 # Google Analytics
