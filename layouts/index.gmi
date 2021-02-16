@@ -39,7 +39,8 @@ You can also find the blog posts on the web here:
 
 ## Where to find me?
 
-- Via email: bac _at_ rdi55 _dot_ pl (GPG key: [B27C 53D0 E72D 26C0](/files/pubkey.txt))
+- Via email: bac _at_ rdi55 _dot_ pl GPG key: B27C 53D0 E72D 26C0 [^10]
+=> https://bacardi55.io/files/pubkey.txt
 - On IRC: bacardi55 on freenode or recycled
 - On Mastodon:
 => https://framapiaf.org/@bacardi55

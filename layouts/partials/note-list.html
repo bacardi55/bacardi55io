@@ -4,17 +4,25 @@
 {{- $dateFormat := site.Params.dateFormat -}}
 {{- if not $dateFormat -}}{{- $dateFormat = "2006-01-02" -}}{{- end -}}
 <ul class="note list">
-    {{- range $paginator.Pages -}}
-      {{- $relURL := replace .RelPermalink "#" "%23" -}}
-      {{- $relURL = replace $relURL "." "%2e" -}}
-    <li class="item">
-      <a class="note" href="{{- $relURL -}}">
-        <p class="note title">{{- .Title | safeHTML -}}</p>
-          {{- if .Date -}}
-            <p class="note date">{{- .Date.Format $dateFormat -}}</p>
-          {{- end -}}
-      </a>
-    </li>
+	{{- range $paginator.Pages -}}
+		{{- $relURL := replace .RelPermalink "#" "%23" -}}
+		{{- $relURL = replace $relURL "." "%2e" -}}
+	<li class="item">
+		{{ if eq .Type "gemlog" }}
+			{{- $gurl := replace .File.Path ".md" ".gmi" -}}
+			<a class="note" href="/pages/gemini#{{- .File.UniqueID -}}">
+		{{ else }}
+			<a class="note" href="{{- $relURL -}}">
+		{{ end }}
+			<p class="note title">
+				{{ if eq .Type "gemlog" }}{Gemlog} - {{ end }}
+				{{- .Title | safeHTML -}}
+			</p>
+				{{- if .Date -}}
+					<p class="note date">{{- .Date.Format $dateFormat -}}</p>
+				{{- end -}}
+		</a>
+	</li>
     {{- end -}}
 </ul>
 {{- end -}}

@@ -8,6 +8,7 @@ copyright = "©2013-2021 bacardi55"
 enableRobotsTXT = true
 
 paginate = 110
+rssLimit = 25
 
 [permalinks]
 posts = "/:year/:month/:day/:title/"
@@ -41,6 +42,7 @@ posts = "/:year/:month/:day/:title/"
   license = ""  # CC License
   fullRss = true # Puts entire HTML post into rss 'description' tag. If unset, default is false.
   geminiBaseUrl = "gemini://gmi.bacardi55.io"
+  mainSections = ["posts", "gemlog"]
 
 [params.comments]
   enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
@@ -82,7 +84,7 @@ posts = "/:year/:month/:day/:title/"
 
 [[params.nav.custom]]
   title = "Gemini"
-  url = "gemini://gmi.bacardi55.io"
+  url = "/pages/gemini"
   weight = 3
 
 
