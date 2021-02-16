@@ -3,28 +3,49 @@
 {{- $justify := false -}}
 {{- if eq .Params.justify true -}} {{- $justify = true -}} {{- end -}}
   <div class="article-container">
-    <p>
-      This blog is also available on <a href="https://gemini.circumlunar.space/">Gemini</a>!
-    </p>
-    <p>
-      The capsule address is <a href="gemini://gmi.bacardi55.io">gemini://gmi.bacardi55.io</a>.
-    </p>
-    <p>
-      I also publish dedicated content on gemini that is listed below (you will need a gemini client or a gemini http proxy);
-    </p>
-  </div>
-  <div class="article-container">
-    <h3>All my gemlog posts:</h3>
+    <div class="article markdown-body">
+      <p>
+        This blog is also available on <a href="https://gemini.circumlunar.space/">Gemini</a>!
+      </p>
+      <p>
+        The capsule address is <a href="gemini://gmi.bacardi55.io">gemini://gmi.bacardi55.io</a>.
+      </p>
+      <p>
+        I also publish dedicated content on gemini that is listed below (you will need a gemini client or a gemini http proxy);
+      </p>
+      <div>
+        <h3>All my gemlog posts:</h3>
+          <ul class="note list">
+          {{ range where site.RegularPages "Section" "gemlog" }}
+            {{- $url := replace .File.Path ".md" ".gmi" -}}
+            <li class="item" id="{{- .File.UniqueID -}}">
+              <a href="gemini://gmi.bacardi55.io/{{- $url | urlize -}}">
+                {{- .Title -}}
+              </a>
+            </li>
+          {{ end }}
+          </ul>
+        </p>
+      </div>
+      <hr />
+      <h3>All my Gemini related web posts:</h3>
       <ul class="note list">
-      {{ range where site.RegularPages "Section" "gemlog" }}
-        {{- $url := replace .File.Path ".md" ".gmi" -}}
-        <li class="item" id="{{- .File.UniqueID -}}">
-          <a href="gemini://gmi.bacardi55.io/{{- $url | urlize -}}">
-            {{- .Title -}}
-          </a>
-        </li>
+      {{ range where (where site.Pages "Section" "posts") "Params.tags" "INTERSECT" (slice "gemini") }}
+        {{- $relURL := replace .RelPermalink "#" "%23" -}}
+        {{- $relURL = replace $relURL "." "%2e" -}}
+        <li class="item"><a class="note" href="{{- $relURL -}}">{{ .Title }}</a></li>
       {{ end }}
       </ul>
-    </p>
+      <hr />
+      <h3>About Gemini</h3>
+      <div>
+        <ul class="list">
+          <li><a href="https://gemini.circumlunar.space/">Learn more about Gemini</a></li>
+          <li><a href="https://github.com/kr1sp1n/awesome-gemini#clients">Get a Gemini client to surf the Gemini space</a></li>
+          <li><a href="https://portal.mozz.us/gemini/gemini.circumlunar.space/">Use an http proxy portal to surf the Gemini space through your web browser</a></li>
+          <li><a href="https://addons.mozilla.org/en-US/firefox/addon/geminize/">Use a firefox extension to load Gemini links with Firefox</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 {{- end -}}
