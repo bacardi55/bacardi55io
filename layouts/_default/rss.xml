@@ -3,24 +3,41 @@
     <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
     <link>{{ .Permalink }}</link>
     <description>Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}</description>
-    <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
-    <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
-    <managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}{{ with .Site.Author.email }}
-    <webMaster>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</webMaster>{{end}}{{ with .Site.Copyright }}
-    <copyright>{{.}}</copyright>{{end}}{{ if not .Date.IsZero }}
-    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    <generator>Hugo -- gohugo.io</generator>
+    {{ with .Site.LanguageCode }}
+    <language>{{.}}</language>
+    {{end}}
+    {{ with .Site.Author.name }}
+    <managingEditor>{{.}}</managingEditor>
+    {{end}}
+    {{ with .Site.Author.name }}
+    <webMaster>{{.}}</webMaster>
+    {{end}}
+    {{ with .Site.Copyright }}
+    <copyright>{{.}}</copyright>
+    {{end}}
+    {{ if not .Date.IsZero }}
+    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{ end }}
     {{ with .OutputFormats.Get "RSS" }}
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
-    {{ range first 10 (where site.RegularPages "Section" "in" "posts") }}
-    <item>
-      <title>{{ .Title }}</title>
-      <link>{{ .Permalink }}</link>
-      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
-      <guid>{{ .Permalink }}</guid>
-      <description>{{ .Content | html }}</description>
-    </item>
+    {{ range first 25 site.RegularPages }}
+      <item>
+        <title>{{ .Title }}</title>
+          {{ if eq .Type "gemlog" }}
+            <link>{{- .Site.BaseURL -}}/pages/gemini#{{- .File.UniqueID -}}</link>
+            <description>This is a Gemini Log (gemlog) post only visible via the Gemini space. To learn more about what is Gemini and my gemini specific content, please <a href="{{- .Site.BaseURL -}}/pages/gemini">read here</a></description>
+          {{ else }}
+            <link>{{ .Permalink }}</link>
+            <description>{{ .Content | html }}</description>
+          {{ end }}
+        <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+        {{ with .Site.Author.name }}
+          <author>{{.}}</author>
+        {{end}}
+        <guid>{{ .Permalink }}</guid>
+      </item>
     {{ end }}
   </channel>
 </rss>
