@@ -1,7 +1,7 @@
 ---
 title: "[DRAFT] Home Automation, part 5: Night and Morning routines with Nodered"
 description: "Description of the automated flow at night and morning with Nodered as the center piece"
-date: 2021-02-13T19:12:13+01:00
+date: 2021-02-19T19:12:13+01:00
 tags:
 - homeautomation
 - nodered
