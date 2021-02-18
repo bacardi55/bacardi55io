@@ -109,4 +109,4 @@ posts = "/:year/:month/:day/:title/"
 [outputs]
   home = ["HTML", "RSS", "gemini"]
   page = ["HTML"]
-  section = ["gemini"]
+  section = ["gemini", "RSS"]

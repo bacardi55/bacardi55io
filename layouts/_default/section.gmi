@@ -2,7 +2,10 @@
 {{ $geminiBaseUrl := site.Params.geminiBaseUrl }}
 
 {{ range .Pages }}
-  {{- $dateFormat := site.Params.dateFormat -}}
-  {{- $dateFormat := .Date.Format $dateFormat -}}
-=> {{ $geminiBaseUrl }}/{{ replace .File.Path ".md" ".gmi" }} {{ .Title }} - {{ $dateFormat }}
+  {{- $dateFormat := .Date.Format "2006-01-02" -}}
+=> {{ $geminiBaseUrl }}/{{ replace .File.Path ".md" ".gmi" }}    {{ $dateFormat }} - {{ .Title }}
 {{ end }}
+
+
+=> /{{ .Type }}/index.xml RSS feed
+=> {{ $geminiBaseUrl }} Go back to the homepage.

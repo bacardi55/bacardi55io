@@ -30,6 +30,11 @@ echo "Moving $workdir/$public_dir/posts/gemini/index.gmi to $workdir/$public_dir
 mv "$workdir/$public_dir/posts/gemini/index.gmi" "$workdir/$public_dir/$gemini_output_dir/posts/"
 echo "Moving $workdir/$public_dir/gemlog/gemini/index.gmi to $workdir/$public_dir/$gemini_output_dir/gemlog/"
 mv "$workdir/$public_dir/gemlog/gemini/index.gmi" "$workdir/$public_dir/$gemini_output_dir/gemlog/"
+echo "Moving Posts RSS files:"
+mv "$workdir/$public_dir/posts/index.xml" "$workdir/$public_dir/$gemini_output_dir/posts/"
+echo "Moving Gemlog RSS files:"
+mv "$workdir/$public_dir/gemlog/index.xml" "$workdir/$public_dir/$gemini_output_dir/gemlog/"
+
 
 echo "deleting files from output"
 echo "$workdir/$public_dir/gemini"

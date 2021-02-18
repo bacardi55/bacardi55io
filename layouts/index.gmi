@@ -1,35 +1,25 @@
 {{ $geminiBaseUrl := site.Params.geminiBaseUrl }}
-    ____                            ___ ____________
-   / __ )____ __________ __________/ (_) ____/ ____/
-  / __  / __ `/ ___/ __ `/ ___/ __  / /___ \/___ \
- / /_/ / /_/ / /__/ /_/ / /  / /_/ / /___/ /___/ /
-/_____/\__,_/\___/\__,_/_/   \__,_/_/_____/_____/
+# Welcome on bacardi55's Gemini capsule :)
 
-
-Welcome on my small capsule on the Gemini space :)
-Disclaimer: I am French and not a native English speaker, I apologize for all the grammar mistakes, misspelling and other errors :-).
-
-I'm planning to add specific gemini content in here, but in the meantime, here are my blog posts:
-
-# My latest Gemlog posts:
+## My latest Gemlog posts:
 
 {{ range first 5 (where site.RegularPages "Section" "in" "gemlog") }}
-  {{- $dateFormat := site.Params.dateFormat -}}
-  {{- $dateFormat := .Date.Format $dateFormat -}}
-=> {{ $geminiBaseUrl }}/{{ replace .File.Path ".md" ".gmi" }} {{ .Title }} - {{ $dateFormat }}
+  {{- $dateFormat := .Date.Format "2006-01-02" -}}
+=> {{ $geminiBaseUrl }}/{{ replace .File.Path ".md" ".gmi" }}    {{ $dateFormat }} - {{ .Title }}
 {{ end }}
 
-=> {{ $geminiBaseUrl }}/gemlog/index.gmi  All my Gemlog posts
+=> {{ $geminiBaseUrl}}/gemlog/index.xml Gemlog RSS feed
+=> {{ $geminiBaseUrl }}/gemlog/ All my Gemlog posts
 
 
-# My latest blog posts:
+## My latest blog posts:
 
 {{ range first 5 (where site.RegularPages "Section" "in" "posts") }}
-  {{- $dateFormat := site.Params.dateFormat -}}
-  {{- $dateFormat := .Date.Format $dateFormat -}}
-=> {{ $geminiBaseUrl }}/{{ replace .File.Path ".md" ".gmi" }} {{ .Title }} - {{ $dateFormat }}
+  {{- $dateFormat := .Date.Format "2006-01-02" -}}
+=> {{ $geminiBaseUrl }}/{{ replace .File.Path ".md" ".gmi" }}    {{ $dateFormat }} - {{ .Title }}
 {{ end }}
 
+=> {{ $geminiBaseUrl}}/posts/index.xml Blog RSS feed
 => {{ $geminiBaseUrl }}/posts/index.gmi  All my Blog posts
 
 
@@ -49,3 +39,4 @@ You can also find the blog posts on the web here:
 - On gitlab (mostly private projects):
 => https://gitlab.com/bacardi55/
 
+Disclaimer: I am French and not a native English speaker, I apologize for all the grammar mistakes, misspelling and other errors :-).
