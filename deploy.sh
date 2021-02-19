@@ -3,6 +3,7 @@
 workdir="/home/bacardi55/workspace/perso/bacardi55iov2"
 public_dir="public"
 gemini_output_dir="_gemini_"
+favicontxtpath="$workdir/static/favicon.txt"
 
 cd "$workdir"
 echo "Removing old public files in $workdir/$public_dir/"
@@ -35,6 +36,8 @@ mv "$workdir/$public_dir/posts/index.xml" "$workdir/$public_dir/$gemini_output_d
 echo "Moving Gemlog RSS files:"
 mv "$workdir/$public_dir/gemlog/index.xml" "$workdir/$public_dir/$gemini_output_dir/gemlog/"
 
+echo "Copying favicon.txt"
+cp "$favicontxtpath" "$workdir/$public_dir/$gemini_output_dir/"
 
 echo "deleting files from output"
 echo "$workdir/$public_dir/gemini"
