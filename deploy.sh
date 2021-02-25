@@ -36,8 +36,8 @@ mv "$workdir/$public_dir/posts/index.xml" "$workdir/$public_dir/$gemini_output_d
 echo "Moving Gemlog RSS files:"
 mv "$workdir/$public_dir/gemlog/index.xml" "$workdir/$public_dir/$gemini_output_dir/gemlog/"
 
-echo "Copying favicon.txt"
-cp "$favicontxtpath" "$workdir/$public_dir/$gemini_output_dir/"
+#echo "Copying favicon.txt"
+#cp "$favicontxtpath" "$workdir/$public_dir/$gemini_output_dir/"
 
 echo "deleting files from output"
 echo "$workdir/$public_dir/gemini"
@@ -74,3 +74,5 @@ rsync -azvhP --delete --exclude "_gemini_" ~/workspace/perso/bacardi55iov2/publi
 
 echo "Deploying Capsule"
 rsync -avzhP --delete ~/workspace/perso/bacardi55iov2/public/_gemini_/ pi@ryosaeba:/srv/gemini/gmi.bacardi55.io/
+echo "Deploying tinylog"
+scp tinylog.gmi pi@ryosaeba:/srv/gemini/gmi.bacardi55.io/
