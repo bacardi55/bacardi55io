@@ -22,6 +22,9 @@
 => {{ $geminiBaseUrl}}/posts/index.xml Blog RSS feed
 => {{ $geminiBaseUrl }}/posts/index.gmi  All my Blog posts
 
+## My TinyLog:
+
+=> {{ $geminiBaseUrl }}/tinylog.gmi Tiny Log
 
 You can also find the blog posts on the web here:
 => https://bacardi55.io
