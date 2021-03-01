@@ -22,18 +22,20 @@
 => {{ $geminiBaseUrl}}/posts/index.xml Blog RSS feed
 => {{ $geminiBaseUrl }}/posts/index.gmi  All my Blog posts
 
+Blog posts are transformed from markdown in a bit of a hacky way, so they are usually better displayed in their web version.
+=> https://bacardi55.io My Blog on the Web (https link)
+=> /posts/2021/02/managing-my-blog-and-gemlog-with-hugo.gmi My hacky way of managing my web blog and my gemlog
+
+
 ## My TinyLog:
 
 => {{ $geminiBaseUrl }}/tinylog.gmi Tiny Log
 
-You can also find the blog posts on the web here:
-=> https://bacardi55.io
-
 
 ## Where to find me?
 
-- Via email: bac _at_ rdi55 _dot_ pl GPG key: B27C 53D0 E72D 26C0 [^10]
-=> https://bacardi55.io/files/pubkey.txt
+- Via email: bac _at_ rdi55 _dot_ pl
+=> https://bacardi55.io/files/pubkey.txt GPG key: B27C 53D0 E72D 26C0 (HTTP link)
 - On IRC: bacardi55 on freenode or recycled
 - On Mastodon:
 => https://framapiaf.org/@bacardi55
