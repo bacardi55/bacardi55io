@@ -14,7 +14,7 @@ You can read [this post about why I'm writing on this blog](/2020/04/25/why-do-i
 
 FYI, I am French and not a native English speaker, I apologize for all the grammar mistakes, misspelling and other errors :-).
 
-You can also find the content of this blog on my [gemini](https://gemini.circumlunar.space/) capsule here: [gemini://gmi.bacardi55.io](gemini://gmi.bacardi55.io)
+You can also find the content of this blog (and more) on my [gemini](https://gemini.circumlunar.space/) capsule here: [gemini://gmi.bacardi55.io](gemini://gmi.bacardi55.io). [Read more about my gemini content](/pages/gemini/).
 
 ## Where to find me?
 
