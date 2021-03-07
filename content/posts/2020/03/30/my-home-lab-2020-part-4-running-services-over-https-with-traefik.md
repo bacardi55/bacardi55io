@@ -108,7 +108,7 @@ networks:
 
 The comments included should help you configure your docker-compose file. The important part are:
 
-- **The Network**: The is very important, all services that will need to be expose via traefik will need to use this network. Network needs to be external.
+- **The Network**: The is very important, all services that will need to be expose via traefik will need to use this network. Network needs to be external. To create the network, this simple command will do: `docker network create -d overlay --attachable traefik-net`;
 - `--providers.docker.defaultRule=Host(`{{ trimPrefix `/` .Name }}.youdomain.com`)` allow to automatically create rules so that if you create an exposed service called `blog` for example, traefik will automatically create the ssl certificate for `blog.yourdomain.com` and expose the service at this address.
 
 If you use the same configuration for letsencrypt storage as above, you will need to create the file `/mnt/cluster-data/containers-data/traefik/acme.json`[^1] and then put the right permission on it:
