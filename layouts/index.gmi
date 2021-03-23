@@ -1,5 +1,6 @@
-{{ $geminiBaseUrl := site.Params.geminiBaseUrl }}
 # Welcome on bacardi55's Gemini capsule :)
+{{ site.Params.slogan }}
+{{ $geminiBaseUrl := site.Params.geminiBaseUrl }}
 
 ## My latest Gemlog posts:
 
