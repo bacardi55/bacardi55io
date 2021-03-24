@@ -15,7 +15,7 @@ categories:
 
 In this post, I'll describe how I use motion, NodeRed, MQTT and Telegram to manage everything related to my entry door camera.
 
-The TLDR; is: when the camera pointing at the entry door sees some movement, it will:
+The TL;DR is: when the camera pointing at the entry door sees some movement, it will:
 - sent a MQTT message right away (that triggers an alert on my phone via Telegram);
 - Start recording video;
 - Take pictures in the meantime. Pictures are scp to another server in the house and outside;
