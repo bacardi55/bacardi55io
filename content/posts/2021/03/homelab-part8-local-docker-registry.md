@@ -1,5 +1,5 @@
 ---
-title: "Home Lab part 8: Create a local registry to manage your own images"
+title: "Home Lab part 8: Create a local docker registry to manage your own images"
 date: 2021-03-29T23:15:13+01:00
 tags:
 - homelab
