@@ -1,5 +1,5 @@
 ---
-title: "Blog Posts"
+title: "Bacardi55's Blog"
 robots: noindex
 outputs:
 - gemini

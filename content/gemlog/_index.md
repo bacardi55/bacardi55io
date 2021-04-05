@@ -1,3 +1,3 @@
 ---
-title: Gemlog Posts
+title: Bacardi55's Gemlog
 ---

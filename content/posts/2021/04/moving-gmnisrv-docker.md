@@ -1,5 +1,5 @@
 ---
-title: "Moving my gemini server gmnisrv to the my swarm cluster"
+title: "Moving gmnisrv to my swarm cluster"
 date: 2021-04-04T15:02:13+01:00
 tags:
 - homelab
