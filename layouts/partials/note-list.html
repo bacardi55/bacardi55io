@@ -10,7 +10,7 @@
 	<li class="item">
 		{{ if eq .Type "gemlog" }}
 			{{- $gurl := replace .File.Path ".md" ".gmi" -}}
-			<a class="note" href="/pages/gemini#{{- .File.UniqueID -}}">
+			<a class="note" href="/pages/gemini">
 		{{ else }}
 			<a class="note" href="{{- $relURL -}}">
 		{{ end }}

@@ -73,6 +73,6 @@ echo "Deploying Blog"
 rsync -azvhP --delete --exclude "_gemini_" ~/workspace/perso/bacardi55iov2/public/ pi@cell:/mnt/sshfs/helios/cluster-data/containers-data/bacardi55io/public
 
 echo "Deploying Capsule"
-rsync -avzhP --delete ~/workspace/perso/bacardi55iov2/public/_gemini_/ pi@ryosaeba:/srv/gemini/gmi.bacardi55.io/
+rsync -avzhP --delete ~/workspace/perso/bacardi55iov2/public/_gemini_/ pi@cell:/mnt/sshfs/helios/cluster-data/containers-data/gemserv/data/gmi.bacardi55.io/
 echo "Deploying tinylog"
-scp tinylog.gmi pi@ryosaeba:/srv/gemini/gmi.bacardi55.io/
+scp tinylog.gmi pi@cell:/mnt/sshfs/helios/cluster-data/containers-data/gemserv/data/gmi.bacardi55.io/
