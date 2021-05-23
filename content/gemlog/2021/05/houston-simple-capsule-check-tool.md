@@ -1,10 +1,10 @@
 ---
-Title: "Houston, a simple tool to check if a capsule is update"
+Title: "Houston, a simple tool to check if a capsule is up"
 date: 2021-05-22T20:30:00+02:00
 lang: en
 ---
 
-# Houston, a simple tool to check if a capsule is update
+# Houston, a simple tool to check if a capsule is up
 
 I've created this tool very quickly to start 2 goals in one:
 * Start learning golang (to try and contribute to other golang project in the gemini space)
