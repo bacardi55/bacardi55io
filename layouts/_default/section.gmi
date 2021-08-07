@@ -1,11 +1,11 @@
 # {{ .Title }}
 {{ $geminiBaseUrl := site.Params.geminiBaseUrl }}
 
+=> /{{ .Type }}/index.xml Atom feed
+=> / Go back to the homepage.
+
 {{ range .Pages }}
   {{- $dateFormat := .Date.Format "2006-01-02" -}}
 => {{ $geminiBaseUrl }}/{{ replace .File.Path ".md" ".gmi" }}    {{ $dateFormat }} - {{ .Title }}
 {{ end }}
 
-
-=> /{{ .Type }}/index.xml RSS feed
-=> {{ $geminiBaseUrl }} Go back to the homepage.

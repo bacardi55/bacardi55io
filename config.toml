@@ -109,6 +109,7 @@ posts = "/:year/:month/:day/:title/"
     path = "/gemini/"
 
 [outputs]
-  home = ["HTML", "RSS", "gemini"]
+  #home = ["HTML", "RSS", "gemini"]
+  home = ["HTML", "RSS"]
   page = ["HTML"]
   section = ["gemini", "RSS"]
