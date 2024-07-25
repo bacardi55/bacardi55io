@@ -1,1 +1,1 @@
-Files to generate my blog (https://bacardi55.io) and my gemblog (gemini://gmi.bacardi55.io)
+Official repository and project is on [soucehut](https://git.sr.ht/~bacardi55/website). This repository is archived.
